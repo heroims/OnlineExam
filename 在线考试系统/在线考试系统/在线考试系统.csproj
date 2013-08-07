@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C81FCD36-90C9-4B2F-9E90-BE8B52AA8403}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>在线考试系统</RootNamespace>
+    <AssemblyName>在线考试系统</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\日志\Logger\Logger\bin\Debug\Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bll\CourseBll.cs" />
+    <Compile Include="Bll\PaperBll.cs" />
+    <Compile Include="Bll\PaperDetailBll.cs" />
+    <Compile Include="Bll\QuestionBll.cs" />
+    <Compile Include="Bll\RoleBll.cs" />
+    <Compile Include="Bll\ScoreBll.cs" />
+    <Compile Include="Bll\UserAnswerBll.cs" />
+    <Compile Include="Bll\UserBll.cs" />
+    <Compile Include="Dal\Comm.cs" />
+    <Compile Include="Dal\CourseDal.cs" />
+    <Compile Include="Dal\PaperDal.cs" />
+    <Compile Include="Dal\PaperDetailDal.cs" />
+    <Compile Include="Dal\QuestionDal.cs" />
+    <Compile Include="Dal\RoleDal.cs" />
+    <Compile Include="Dal\ScoreDal.cs" />
+    <Compile Include="Dal\SqlHelp.cs" />
+    <Compile Include="Dal\UserAnswerDal.cs" />
+    <Compile Include="Dal\UserDal.cs" />
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnswerCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnswerCard.Designer.cs">
+      <DependentUpon>frmAnswerCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourseManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseManage.Designer.cs">
+      <DependentUpon>frmCourseManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFillBlankAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFillBlankAdd.Designer.cs">
+      <DependentUpon>frmFillBlankAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJudgeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJudgeAdd.Designer.cs">
+      <DependentUpon>frmJudgeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainManage.Designer.cs">
+      <DependentUpon>frmMainManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePwd.Designer.cs">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindScore.Designer.cs">
+      <DependentUpon>frmFindScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMultiSelectAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMultiSelectAdd.Designer.cs">
+      <DependentUpon>frmMultiSelectAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaperManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaperManage.Designer.cs">
+      <DependentUpon>frmPaperManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaperSetUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaperSetUp.Designer.cs">
+      <DependentUpon>frmPaperSetUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionAdd.Designer.cs">
+      <DependentUpon>frmQuestionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionDataBase.Designer.cs">
+      <DependentUpon>frmQuestionDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoleManage.Designer.cs">
+      <DependentUpon>frmRoleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScoreManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScoreManage.Designer.cs">
+      <DependentUpon>frmScoreManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectPaper.Designer.cs">
+      <DependentUpon>frmSelectPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetRights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetRights.Designer.cs">
+      <DependentUpon>frmSetRights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleSelectAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingleSelectAdd.Designer.cs">
+      <DependentUpon>frmSingleSelectAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStartExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStartExam.Designer.cs">
+      <DependentUpon>frmStartExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentExam.Designer.cs">
+      <DependentUpon>frmStudentExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserManage.Designer.cs">
+      <DependentUpon>frmUserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserPaper.Designer.cs">
+      <DependentUpon>frmUserPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserPaperList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserPaperList.Designer.cs">
+      <DependentUpon>frmUserPaperList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\JudgeQuestionProblem.cs" />
+    <Compile Include="Model\fillBlankProblem.cs" />
+    <Compile Include="Model\PaperDetail.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\Score.cs" />
+    <Compile Include="Model\SingleMultiProblem.cs" />
+    <Compile Include="Model\UserAnswer.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnswerCard.resx">
+      <DependentUpon>frmAnswerCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePwd.resx">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourseManage.resx">
+      <DependentUpon>frmCourseManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFillBlankAdd.resx">
+      <DependentUpon>frmFillBlankAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindScore.resx">
+      <DependentUpon>frmFindScore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJudgeAdd.resx">
+      <DependentUpon>frmJudgeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainManage.resx">
+      <DependentUpon>frmMainManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMultiSelectAdd.resx">
+      <DependentUpon>frmMultiSelectAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaperManage.resx">
+      <DependentUpon>frmPaperManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaperSetUp.resx">
+      <DependentUpon>frmPaperSetUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionAdd.resx">
+      <DependentUpon>frmQuestionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionDataBase.resx">
+      <DependentUpon>frmQuestionDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoleManage.resx">
+      <DependentUpon>frmRoleManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScoreManage.resx">
+      <DependentUpon>frmScoreManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectPaper.resx">
+      <DependentUpon>frmSelectPaper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetRights.resx">
+      <DependentUpon>frmSetRights.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingleSelectAdd.resx">
+      <DependentUpon>frmSingleSelectAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStartExam.resx">
+      <DependentUpon>frmStartExam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentExam.resx">
+      <DependentUpon>frmStudentExam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserManage.resx">
+      <DependentUpon>frmUserManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserPaper.resx">
+      <DependentUpon>frmUserPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserPaperList.resx">
+      <DependentUpon>frmUserPaperList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录界面背景.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\加载界面.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\清空按钮.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\退出按钮.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\学生登录成功窗体.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录按钮.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dc.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GroupUserA.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\find.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

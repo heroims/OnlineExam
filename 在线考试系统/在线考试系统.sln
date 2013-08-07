@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "在线考试系统", "在线考试系统\在线考试系统.csproj", "{C81FCD36-90C9-4B2F-9E90-BE8B52AA8403}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{2CEE2554-EB65-4B4E-8D74-64E7BEFDE511}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C81FCD36-90C9-4B2F-9E90-BE8B52AA8403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81FCD36-90C9-4B2F-9E90-BE8B52AA8403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81FCD36-90C9-4B2F-9E90-BE8B52AA8403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81FCD36-90C9-4B2F-9E90-BE8B52AA8403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEE2554-EB65-4B4E-8D74-64E7BEFDE511}.Debug|Any CPU.ActiveCfg = Debug
+		{2CEE2554-EB65-4B4E-8D74-64E7BEFDE511}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
